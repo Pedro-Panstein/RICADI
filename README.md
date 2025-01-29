@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# RICADI - Corretora de Seguros
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é o repositório do site da **RICADI**, uma corretora de seguros comprometida em oferecer tranquilidade e segurança para você e sua família.
 
-## Available Scripts
+Acesse nosso site online em: **[ricadi.com](#)**
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O projeto foi desenvolvido com as seguintes tecnologias:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Angular**: Framework para construção de interfaces dinâmicas.
+- **TypeScript**: Superset do JavaScript para código mais seguro e escalável.
+- **Firebase**: Backend e banco de dados para autenticação e armazenamento.
+- **HTML5 e TailwindCSS**: Estrutura e design responsivo para uma experiência intuitiva.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Recursos do Site
 
-### `npm run build`
+✔️ **Home Page** – Apresentação da RICADI e nosso compromisso com a segurança.  
+✔️ **Por que Escolher a RICADI?** – Destaques sobre os diferenciais da corretora.  
+✔️ **Catálogo de Seguros** – Lista dos tipos de seguros oferecidos, com informações detalhadas.  
+✔️ **Contato** – Formulário para solicitação de cotação e suporte ao cliente.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Como Rodar o Projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone o repositório:
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/seu-usuario/ricadi-site.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Acesse a pasta do projeto:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone cd ricadi-site
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Instale as dependências:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+4. Inicie o servidor de desenvolvimento:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm run dev
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Abra o navegador em: http://localhost:3000
 
-### Code Splitting
+## Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## RICADI - Corretora de Seguros
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Site Oficial:** [ricadi.com](#)
+- **Email:** ricadiseguros@gmail.com
+- **Telefone:** (47) 99973-5229
