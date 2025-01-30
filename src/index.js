@@ -4,11 +4,6 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import HomePage from "./pages/HomePage";
-import Dia22 from "./pages/Dia22";
-import Dia23 from "./pages/Dia23";
-import Dia24 from "./pages/Dia24";
-import Dia25 from "./pages/Dia25";
-import Dia26 from "./pages/Dia26";
 
 const router = createBrowserRouter([
   {
