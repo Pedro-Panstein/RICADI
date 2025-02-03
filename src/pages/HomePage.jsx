@@ -7,8 +7,46 @@ import ContactButtom from "../components/ContactButtom";
 import { TiLocationArrowOutline } from "react-icons/ti";
 import { BiCheckShield } from "react-icons/bi";
 import { FaHandHoldingMedical } from "react-icons/fa";
+import { useEffect } from "react";
+import { doc, getDoc, setDoc, increment, updateDoc } from "firebase/firestore";
+import { db } from "../firebaseConfig";
 
 export default function HomePage() {
+  useEffect(() => {
+    const incrementViewCount = async () => {
+      const viewKey = "hasViewed"; // Chave única para identificar a visualização desta página
+
+      // Verifica se o usuário já contou a visualização nesta sessão
+      if (localStorage.getItem(viewKey) === "true") {
+        return;
+      }
+
+      // Marca no localStorage que a visualização foi contabilizada
+      localStorage.setItem(viewKey, "true");
+
+      const docRef = doc(db, "Banco de acessos", "RICADI"); // Referência ao Firestore
+
+      try {
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          await updateDoc(docRef, {
+            Visualizações: increment(1),
+          });
+          console.log("Visualizações incrementadas com sucesso!");
+        } else {
+          console.log("Documento não encontrado, criando um novo...");
+          await setDoc(docRef, { Visualizações: 1 });
+          console.log("Documento criado com 1 visualização.");
+        }
+      } catch (error) {
+        console.error("Erro ao acessar ou atualizar visualizações:", error);
+      }
+    };
+
+    incrementViewCount();
+  }, []);
+
   return (
     <>
       <div>
