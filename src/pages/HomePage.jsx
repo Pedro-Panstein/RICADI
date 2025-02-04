@@ -11,6 +11,8 @@ import { FaHandHoldingMedical } from "react-icons/fa";
 import { useEffect } from "react";
 import { doc, getDoc, setDoc, increment, updateDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig";
+import UniqueRicadi from "../components/UniqueRicadi";
+import AllInsurance from "../components/seguros/AllInsurance";
 
 export default function HomePage() {
   useEffect(() => {
@@ -125,7 +127,15 @@ export default function HomePage() {
         </div>
         {/* O que torna a ricadi única */}
         <div>
-          
+          <UniqueRicadi />
+        </div>
+        {/* Seguros */}
+        <div className="p-5 mt-32 text-center">
+          <h2 className="text-2xl font-bold font-asap text-blueRICADI">
+            Encontre o seguro{" "}
+            <span className="text-textBlue">ideal para você</span>
+          </h2>
+          <AllInsurance />
         </div>
       </div>
     </>
