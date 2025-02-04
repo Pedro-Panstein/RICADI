@@ -2,7 +2,8 @@
 import Header from "../components/Header";
 
 //Imagens
-import textoRicadi from "../assets/Texto RICADI.png";
+import textoRicadi from "../assets/RICADI logotipo.png";
+import bgBanner from "../assets/banner-bg.png";
 import ContactButtom from "../components/ContactButtom";
 import { TiLocationArrowOutline } from "react-icons/ti";
 import { BiCheckShield } from "react-icons/bi";
@@ -52,22 +53,35 @@ export default function HomePage() {
       <div>
         <Header />
       </div>
-      <div className="p-5">
-        <div className="flex flex-col items-center justify-center">
-          <div className="xl:justify-center xl:flex xl:items-center xl:mb-32 xl:mt-14">
-            <img
-              src={textoRicadi}
-              className="w-[50%] mx-auto mt-14 xl:w-[30%]"
-            />
-            <p className="text-lg text-justify font-semibold w-[80%] mx-auto mt-10 font-maven-pro mb-20 md:text-2xl xl:w-[520px] xl:mb-0">
-              Na <span className="font-bold text-textBlue">RICADI</span>,
-              transformar incertezas em tranquilidade é o nosso compromisso.
-              Escolha estar seguro, escolha esta{" "}
-              <span className="font-bold text-textBlue">com a gente.</span>
-            </p>
+      <div>
+        <div
+          id="banner"
+          className="relative flex flex-col items-center justify-center min-h-[60vh] h-[100%] w-full bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgBanner})` }}
+        >
+          {/* Overlay para legibilidade */}
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+
+          {/* Conteúdo do banner */}
+          <div className="relative z-10 text-center xl:mb-32 xl:text-start">
+            <div className="xl:justify-center xl:flex xl:items-center xl:mb-10 xl:mt-14">
+              <img
+                src={textoRicadi}
+                className="w-[50%] mx-auto mt-14 xl:w-[30%] xl:mr-44 2xl:mr-72 max-w-[400px]"
+              />
+              <p className="text-lg text-white text-justify font-semibold w-[80%] max-w-[1000px] mx-auto mt-10 font-maven-pro mb-10 md:text-2xl xl:w-[520px] xl:mb-0">
+                Na <span className="font-bold text-[#AAE9FF]">RICADI</span>,
+                transformar incertezas em tranquilidade é o nosso compromisso.
+                Escolha estar seguro, escolha esta{" "}
+                <span className="font-bold text-[#AAE9FF]">com a gente.</span>
+              </p>
+            </div>
+            <div className="ml-5 xl:ml-3 2xl:ml-0">
+              <ContactButtom color={"bg-white"} textColor={"text-blueRICADI"} />
+            </div>
           </div>
-          <ContactButtom />
         </div>
+        {/* Por que escolher a ricadi */}
         <div>
           <h2 className="mt-40 text-2xl font-bold text-center font-asap">
             Por que escolher a{" "}
@@ -96,7 +110,7 @@ export default function HomePage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="text-whiteRICADI p-7 pt-2 rounded-xl w-[350px] h-[270px] mx-auto bg-blueRICADI xl:w-[420px] xl:h-[320px] xl:pt-7 md:mx-0"
+                className="text-whiteRICADI p-7 pt-4 rounded-xl w-[350px] h-[270px] mx-auto bg-blueRICADI xl:w-[420px] xl:h-[320px] xl:pt-7 md:mx-0"
               >
                 <p className="text-[4rem]">{item.icon}</p>
                 <h3 className="mt-4 text-xl font-bold text-start font-asap xl:text-2xl xl:mt-7">
@@ -108,6 +122,10 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+        {/* O que torna a ricadi única */}
+        <div>
+          
         </div>
       </div>
     </>

@@ -2,7 +2,7 @@ import { doc, getDoc, updateDoc, increment, setDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig"; // Caminho para o arquivo firebaseConfig.
 import { useState } from "react";
 
-export default function ContactButtom() {
+export default function ContactButtom({color, textColor}) {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = async () => {
@@ -33,7 +33,7 @@ export default function ContactButtom() {
   return (
     <button
       onClick={handleClick}
-      className="px-4 py-2 text-lg font-semibold rounded-lg shadow-md text-white font-maven-pro hover:bg-blueRICADI/90 transition-colors bg-blueRICADI lg:text-[1.2rem] md:px-6 md:py-4"
+      className={`px-4 py-2 text-lg font-semibold rounded-lg shadow-md font-maven-pro hover:${color}/90 transition-colors ${color} ${textColor} lg:text-[1.2rem] md:px-6 md:py-4`}
     >
       Faça sua cotação
     </button>
