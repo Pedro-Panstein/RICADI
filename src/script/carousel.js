@@ -15,7 +15,6 @@ export function initCarousel() {
     const mediaQuery = window.matchMedia("(min-width: 1394px)");
 
     if (mediaQuery.matches) {
-      console.log("oi");
       // Quando a tela for menor que 1394px, esconda o carrossel e mostre os 3 primeiros itens
       carousel.style.display = "none"; // Esconde o carrossel
       secondCarousel.style.display = "none"; // Exibe o segundo carrossel

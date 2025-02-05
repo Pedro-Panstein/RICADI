@@ -4,6 +4,9 @@ module.exports = {
   darkMode: "class", // Adiciona a configuração para o modo escuro baseado na classe "dark"
   theme: {
     extend: {
+      screens: {
+        small: "500px",
+      },
       colors: {
         blueRICADI: "#0B2E43",
         whiteRICADI: "#D9D9D9",

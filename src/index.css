@@ -24,18 +24,28 @@ body {
   min-height: 68vh;
   width: 100%;
   background: linear-gradient(
-    #3c444a,
-    #3c444a,
-    #3c444a,
-    #3c444a,
-    #3c444a,
-    #3c444a,
-    #3c444a,
-    #3c444a,
-    #3c444a,
-    #3c444a,
+    #64727a,
+    #64727a,
+    #64727a,
+    #64727a,
+    #64727a,
+    #64727a,
+    #64727a,
+    #64727a,
+    #64727a,
+    #64727a,
     #d9d9d9
   );
+}
+
+@media screen and (min-width: 1077px) {
+  #banner {
+    height: 78vh;
+  }
+
+  #banner::after {
+    height: 90vh;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -45,5 +55,15 @@ body {
 
   #banner {
     height: 85vh;
+  }
+}
+
+@media screen and (min-width: 1531px) {
+  #banner::after {
+    height: 105vh;
+  }
+
+  #banner {
+    height: 95vh;
   }
 }

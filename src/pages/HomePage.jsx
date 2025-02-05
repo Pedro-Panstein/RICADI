@@ -61,9 +61,6 @@ export default function HomePage() {
           className="relative flex flex-col items-center justify-center min-h-[60vh] h-[100%] w-full bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${bgBanner})` }}
         >
-          {/* Overlay para legibilidade */}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-
           {/* Conteúdo do banner */}
           <div className="relative z-10 text-center xl:mb-32 xl:text-start">
             <div className="xl:justify-center xl:flex xl:items-center xl:mb-10 xl:mt-14">
@@ -74,7 +71,7 @@ export default function HomePage() {
               <p className="text-lg text-white text-justify font-semibold w-[80%] max-w-[1000px] mx-auto mt-10 font-maven-pro mb-10 md:text-2xl xl:w-[520px] xl:mb-0">
                 Na <span className="font-bold text-[#AAE9FF]">RICADI</span>,
                 transformar incertezas em tranquilidade é o nosso compromisso.
-                Escolha estar seguro, escolha esta{" "}
+                Escolha estar seguro, escolha estar{" "}
                 <span className="font-bold text-[#AAE9FF]">com a gente.</span>
               </p>
             </div>

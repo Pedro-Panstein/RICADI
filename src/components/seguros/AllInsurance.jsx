@@ -47,13 +47,13 @@ export default function AllInsurance() {
       icon: <FaHandHoldingMedical className="text-4xl text-blueRICADI" />,
       title: "Previdência",
       description:
-        "Garanta o seu futuro e o de sua família com planos de previdência que oferecem segurança e tranquilidade nos anos vindouros.",
+        "Garanta um futuro seguro e tranquilo para você e sua família com nossos planos de previdência.",
     },
     {
       icon: <BsFillChatTextFill className="text-4xl text-blueRICADI" />,
       title: "Outros",
       description:
-        "Oferecemos uma variedade de seguros para diversas situações, adaptando-se às suas necessidades e proporcionando a paz de espírito que você merece.",
+        "Oferecemos seguros variados, adaptados às suas necessidades, para garantir sua tranquilidade.",
     },
   ];
 
@@ -73,11 +73,14 @@ export default function AllInsurance() {
         {seguros.map((seguro, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-4 text-center rounded-lg shadow-md bg-[#F0F0F0] w-[150px] h-[150px]"
+            className="flex flex-col items-center p-4 text-center rounded-lg shadow-md bg-[#F0F0F0] w-[150px] h-[150px] small:w-[200px] small:h-[200px] small:text-[14px]"
           >
-            {seguro.icon}
+            <p>{seguro.icon}</p>
             <h3 className="mt-3 text-xl font-bold">{seguro.title}</h3>
-            <p className="mt-2 text-sm text-justify text-gray-600">{seguro.description}</p>
+            <p className="hidden small:flex mt-2 text-md text-justify text-gray-600 small:">
+              {seguro.description}
+            </p>
+            <button className="small:hidden">Ver mais</button>
           </div>
         ))}
       </div>

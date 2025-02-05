@@ -54,7 +54,7 @@ export default function UniqueRicadi() {
               <h3 className="my-5 text-2xl font-bold font-asap">
                 {benefit.title}
               </h3>
-              <p className="text-lg text-justify opacity-60 w-[350px] font-maven-pro">
+              <p className="text-md text-justify opacity-60 w-[330px] font-maven-pro">
                 {benefit.description}
               </p>
             </div>
@@ -86,7 +86,7 @@ export default function UniqueRicadi() {
                 <h3 className="my-5 text-2xl font-bold font-asap">
                   {benefit.title}
                 </h3>
-                <p className="text-lg text-justify opacity-60 w-[350px] font-maven-pro">
+                <p className="text-md text-justify opacity-60 w-[330px] font-maven-pro">
                   {benefit.description}
                 </p>
               </div>
@@ -145,7 +145,7 @@ export default function UniqueRicadi() {
               <h3 className="my-5 text-2xl font-bold font-asap">
                 {benefit.title}
               </h3>
-              <p className="text-lg text-justify opacity-60 w-[350px] font-maven-pro">
+              <p className="text-md text-justify opacity-60 w-[330px] font-maven-pro">
                 {benefit.description}
               </p>
             </div>
