@@ -58,7 +58,7 @@ export default function AllInsurance() {
   ];
 
   return (
-    <div className="bg-[#D2D5D6] p-5 rounded-lg mt-10">
+    <div className="bg-[#D2D5D6] p-3 rounded-lg mt-10 w-full max-w-[1000px] mx-auto small:p-5">
       <div className="flex justify-center mb-5">
         <button className="font-bold text-white bg-secondBlueRICADI font-asap w-[180px] rounded-l-lg p-2 text-lg">
           Para Você
@@ -77,7 +77,7 @@ export default function AllInsurance() {
           >
             <p>{seguro.icon}</p>
             <h3 className="mt-3 text-xl font-bold">{seguro.title}</h3>
-            <p className="hidden small:flex mt-2 text-md text-justify text-gray-600 small:">
+            <p className="hidden mt-2 text-justify text-gray-600 small:flex text-md small:">
               {seguro.description}
             </p>
             <button className="small:hidden">Ver mais</button>

@@ -127,8 +127,8 @@ export default function HomePage() {
           <UniqueRicadi />
         </div>
         {/* Seguros */}
-        <div className="p-5 mt-32 text-center">
-          <h2 className="text-2xl font-bold font-asap text-blueRICADI">
+        <div className="p-2 mt-32 text-center ">
+          <h2 className="p-5 text-2xl font-bold font-asap text-blueRICADI">
             Encontre o seguro{" "}
             <span className="text-textBlue">ideal para você</span>
           </h2>

@@ -48,7 +48,7 @@ export default function UniqueRicadi() {
           ].map((benefit, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-6 text-center text-white"
+              className="flex flex-col items-center text-center text-white h-[300px] xl:p-6"
             >
               <div className="text-7xl">{benefit.icon}</div>
               <h3 className="my-5 text-2xl font-bold font-asap">
@@ -80,7 +80,7 @@ export default function UniqueRicadi() {
             ].map((benefit, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center p-6 text-center text-white"
+                className="flex flex-col items-center text-center text-white xl:p-6"
               >
                 <div className="text-7xl">{benefit.icon}</div>
                 <h3 className="my-5 text-2xl font-bold font-asap">
@@ -139,7 +139,7 @@ export default function UniqueRicadi() {
           ].map((benefit, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-6 text-center text-white"
+              className="flex flex-col items-center p-6 text-center text-white h-[300px] "
             >
               <div className="text-7xl">{benefit.icon}</div>
               <h3 className="my-5 text-2xl font-bold font-asap">
