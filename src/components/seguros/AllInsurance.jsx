@@ -47,18 +47,18 @@ export default function AllInsurance() {
       icon: <FaHandHoldingMedical className="text-4xl text-blueRICADI" />,
       title: "Previdência",
       description:
-        "Garanta um futuro seguro e tranquilo para você e sua família com nossos planos de previdência.",
+        "Garanta um futuro seguro e tranquilo para sua família com nossos planos de previdência.",
     },
     {
       icon: <BsFillChatTextFill className="text-4xl text-blueRICADI" />,
       title: "Outros",
       description:
-        "Oferecemos seguros variados, adaptados às suas necessidades, para garantir sua tranquilidade.",
+        "Seguros adaptados às suas necessidades, para garantir sua tranquilidade.",
     },
   ];
 
   return (
-    <div className="bg-[#D2D5D6] p-3 rounded-lg mt-10 w-full max-w-[1000px] mx-auto small:p-5">
+    <div className="bg-[#D2D5D6] p-3 rounded-lg mt-10 w-full max-w-[1000px] mx-auto small:p-5 lg:px-0">
       <div className="flex justify-center mb-5">
         <button className="font-bold text-white bg-secondBlueRICADI font-asap w-[180px] rounded-l-lg p-2 text-lg">
           Para Você
@@ -69,18 +69,22 @@ export default function AllInsurance() {
       </div>
 
       {/* Lista de Seguros */}
-      <div className="flex flex-wrap items-center justify-center gap-5">
+      <div className="flex flex-wrap items-center justify-center gap-5 lg:justify-start lg:px-[120px]">
         {seguros.map((seguro, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-4 text-center rounded-lg shadow-md bg-[#F0F0F0] w-[150px] h-[150px] small:w-[200px] small:h-[200px] small:text-[14px]"
+            className="flex flex-col items-center p-4 text-center rounded-lg shadow-md bg-[#F0F0F0] w-[150px] h-[150px] small:w-[200px] small:h-[210px] small:text-[14px] small:cursor-pointer lg:w-[240px] lg:h-[200px]"
           >
             <p>{seguro.icon}</p>
-            <h3 className="mt-3 text-xl font-bold">{seguro.title}</h3>
-            <p className="hidden mt-2 text-justify text-gray-600 small:flex text-md small:">
+            <h3 className="mt-3 text-xl font-bold font-asap text-blueRICADI">
+              {seguro.title}
+            </h3>
+            <p className="hidden font-maven-pro mt-2 text-justify text-[#02465D] font-semibold small:flex text-[14px] small:pt-2">
               {seguro.description}
             </p>
-            <button className="small:hidden">Ver mais</button>
+            <button className="small:hidden text-secondWhiteRICADI bg-blueRICADI font-asap font-bold w-[100px] h-[30px] rounded-md mt-2 hover:scale-[1.01] shadow-mdq">
+              Ver mais
+            </button>
           </div>
         ))}
       </div>
