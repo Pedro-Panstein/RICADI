@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       screens: {
         small: "500px",
+        medium: "795px",
+        large: "1394px",
       },
       colors: {
         blueRICADI: "#0B2E43",

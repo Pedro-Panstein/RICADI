@@ -4,7 +4,7 @@ import { GoPeople } from "react-icons/go";
 import { HiArrowPathRoundedSquare } from "react-icons/hi2";
 import { MdOutlineSpeed, MdSupportAgent } from "react-icons/md";
 
-import js from "../script/carousel"; // Importando o script JS
+import js from "../script/carousel"; // Importando o script JS798
 import { IoIosArrowForward } from "react-icons/io";
 
 export default function UniqueRicadi() {
@@ -39,12 +39,6 @@ export default function UniqueRicadi() {
               description:
                 "Segurança é a nossa prioridade. Trabalhamos apenas com seguradoras confiáveis e oferecemos planos que protegem você e seu patrimônio, proporcionando tranquilidade em qualquer situação.",
             },
-            {
-              icon: <MdOutlineSpeed />,
-              title: "Processo Simples e Rápido",
-              description:
-                "Sabemos que seu tempo é valioso. Por isso, tornamos a contratação e o gerenciamento do seu seguro descomplicados, com processos rápidos e eficientes, sem burocracia desnecessária.",
-            },
           ].map((benefit, index) => (
             <div
               key={index}
@@ -59,10 +53,31 @@ export default function UniqueRicadi() {
               </p>
             </div>
           ))}
+          {[
+            {
+              icon: <MdOutlineSpeed />,
+              title: "Processo Simples e Rápido",
+              description:
+                "Sabemos que seu tempo é valioso. Por isso, tornamos a contratação e o gerenciamento do seu seguro descomplicados, com processos rápidos e eficientes, sem burocracia desnecessária.",
+            },
+          ].map((benefit, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center text-white h-[300px] xl:p-6 medium:hidden large:flex"
+            >
+              <div className="text-7xl">{benefit.icon}</div>
+              <h3 className="my-5 text-2xl font-bold font-asap">
+                {benefit.title}
+              </h3>
+              <p className="text-md text-justify opacity-60 w-[330px] font-maven-pro">
+                {benefit.description}
+              </p>
+            </div>
+          ))}
 
           <div
             id="carousel"
-            className="flex flex-wrap items-center justify-center gap-20"
+            className="flex flex-wrap items-center justify-center gap-24"
           >
             {[
               {
