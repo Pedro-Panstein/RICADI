@@ -161,7 +161,7 @@ export default function AllInsurance() {
         {seguros.map((seguro, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-4 text-center rounded-lg shadow-md bg-[#F0F0F0] w-[150px] h-[150px] small:w-[200px] small:h-[210px] small:text-[14px] small:cursor-pointer lg:w-[240px] lg:h-[200px]"
+            className="flex relative flex-col items-center p-4 text-center rounded-lg shadow-md bg-[#F0F0F0] w-[150px] h-[170px] small:w-[200px] small:h-[210px] small:text-[14px] small:cursor-pointer lg:w-[240px] lg:h-[200px]"
             onClick={() => handleOpenModal(seguro)}
           >
             <p>{seguro.icon}</p>
@@ -171,7 +171,7 @@ export default function AllInsurance() {
             <p className="hidden font-maven-pro mt-2 text-justify text-[#02465D] font-semibold small:flex text-[14px] small:pt-2">
               {seguro.description}
             </p>
-            <button className="small:hidden text-secondWhiteRICADI bg-blueRICADI font-asap font-bold w-[100px] h-[30px] rounded-md mt-2 hover:scale-[1.01] shadow-mdq">
+            <button className="small:hidden absolute bottom-3 text-secondWhiteRICADI bg-blueRICADI font-asap font-bold w-[100px] h-[30px] rounded-md mt-2 hover:scale-[1.01] shadow-md">
               Ver mais
             </button>
           </div>
