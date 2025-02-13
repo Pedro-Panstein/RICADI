@@ -16,6 +16,16 @@ import { GiHealthNormal, GiKnifeFork } from "react-icons/gi";
 import { TbBuilding, TbDental } from "react-icons/tb";
 import Modal from "../Modal/Modal";
 
+//Imagens
+import viagem from "../../assets/viagem.png";
+import consorcio from "../../assets/consorcio.png";
+import saude from "../../assets/saude.png";
+import eletronico from "../../assets/eletronico.png";
+import automovel from "../../assets/automovel.png";
+import casa from "../../assets/casa.png";
+import previdencia from "../../assets/previdência.png";
+import logotipo from "../../assets/Texto RICADI.png";
+
 export default function AllInsurance() {
   const [tipoSeguro, setTipoSeguro] = useState("pessoal");
   const [modalOpen, setModalOpen] = useState(false);
@@ -33,48 +43,69 @@ export default function AllInsurance() {
       description:
         "Seguro viagem para você explorar o mundo com tranquilidade e segurança",
       advancedDescription:
-        "Nosso seguro viagem cobre emergências médicas, extravio de bagagens e cancelamentos inesperados.",
+        "Viaje sem preocupações! Nosso seguro viagem oferece cobertura completa para emergências médicas, extravio de bagagens, cancelamentos inesperados e muito mais. Conte com assistência 24h em qualquer lugar do mundo e aproveite cada momento da sua viagem com segurança e tranquilidade.",
+      image: viagem,
     },
     {
       icon: <CgFileDocument className="text-4xl text-blueRICADI" />,
       title: "Consórcio",
       description: "Planos de consórcio para realizar seus sonhos com economia",
+      advancedDescription:
+        "Chegou a hora de conquistar seus sonhos! Com nossos planos de consórcio, você pode adquirir imóveis, veículos e diversos bens de forma planejada e econômica, sem juros abusivos. Flexibilidade, segurança e transparência para você investir no seu futuro.",
+      image: consorcio,
     },
     {
       icon: <BiSolidShieldPlus className="text-4xl text-blueRICADI" />,
       title: "Saúde",
       description:
         "Proteja sua saúde e de sua família com os melhores planos personalizados",
+      advancedDescription:
+        "Sua saúde em primeiro lugar! Oferecemos planos de saúde completos, com ampla rede credenciada, cobertura nacional e atendimento de qualidade para garantir o seu bem-estar e de sua família em qualquer momento.",
+      image: saude,
     },
     {
       icon: <IoPhonePortraitOutline className="text-4xl text-blueRICADI" />,
       title: "Eletrônicos",
       description:
         "Garanta a proteção dos seus dispositivos contra danos e imprevistos",
+      advancedDescription:
+        "Proteja seus dispositivos contra roubo, queda, derramamento de líquidos e outros imprevistos. Com nosso seguro para eletrônicos, você tem reposição rápida, suporte técnico especializado e cobertura nacional para seus equipamentos.",
+      image: eletronico,
     },
     {
       icon: <FaCar className="text-4xl text-blueRICADI" />,
       title: "Automóvel",
       description:
         "Seguro automotivo para cuidar do seu veículo e sua segurança",
+      advancedDescription:
+        "Dirija com tranquilidade! Nosso seguro automotivo oferece assistência 24h, cobertura contra roubos, colisões e danos a terceiros, além de diversos benefícios para garantir sua segurança e do seu veículo.",
+      image: automovel,
     },
     {
       icon: <FaHouse className="text-4xl text-blueRICADI" />,
       title: "Casa",
       description:
         "Proteja o seu lar contra imprevistos e cuide do que é mais importante",
+      advancedDescription:
+        "Seu lar sempre seguro! Oferecemos proteção contra incêndios, roubos, danos elétricos, desastres naturais e muito mais. Além disso, você conta com assistência residencial para emergências, como chaveiro e encanador.",
+      image: casa,
     },
     {
       icon: <FaHandHoldingMedical className="text-4xl text-blueRICADI" />,
       title: "Previdência",
       description:
         "Garanta um futuro seguro e tranquilo para sua família com nossos planos de previdência.",
+      advancedDescription:
+        "Planeje seu futuro com segurança! Com nossos planos de previdência, você constrói uma reserva financeira sólida para garantir estabilidade e tranquilidade para você e sua família. Flexibilidade e rentabilidade para um amanhã mais seguro.",
+      image: previdencia,
     },
     {
       icon: <BsFillChatTextFill className="text-4xl text-blueRICADI" />,
       title: "Outros",
       description:
         "Seguros adaptados às suas necessidades, para garantir sua tranquilidade.",
+      advancedDescription:
+        "Soluções personalizadas para cada momento da sua vida. Nossos seguros são adaptáveis às suas necessidades específicas, garantindo proteção sob medida para você e sua família.",
     },
   ];
 
@@ -85,49 +116,63 @@ export default function AllInsurance() {
       description:
         "Gestão de benefícios para seus colaboradores com segurança.",
       advancedDescription:
-        "Oferecemos cartões de benefícios flexíveis, permitindo personalização conforme as necessidades da empresa.",
+        "Incentive e valorize sua equipe! Oferecemos cartões de benefícios flexíveis, permitindo personalização conforme as necessidades da empresa, proporcionando maior satisfação e retenção dos colaboradores.",
     },
     {
       icon: <GiHealthNormal className="text-4xl text-blueRICADI" />,
       title: "Plano de saúde",
       description:
         "Cuide do bem-estar da sua equipe com os melhores planos de saúde.",
+      advancedDescription:
+        "Cuide da saúde dos seus colaboradores com os melhores planos empresariais. Cobertura ampla, atendimento de qualidade e suporte especializado para garantir o bem-estar da sua equipe.",
     },
     {
       icon: <TbBuilding className="text-4xl text-blueRICADI" />,
       title: "Patrimonial",
       description:
         "Proteja os bens da sua empresa contra imprevistos e riscos variados.",
+      advancedDescription:
+        "Segurança para seu patrimônio! Nosso seguro empresarial protege seu imóvel, equipamentos, estoques e outros bens essenciais contra incêndios, roubos, desastres naturais e demais imprevistos.",
     },
     {
       icon: <FaBriefcase className="text-4xl text-blueRICADI" />,
       title: "Vida empresarial",
       description:
         "Segurança e estabilidade financeira para seus funcionários e seus familiares.",
+      advancedDescription:
+        "Valorize sua equipe! O seguro de vida empresarial garante proteção financeira para seus funcionários e seus familiares, oferecendo segurança e tranquilidade para todos.",
     },
     {
       icon: <GiKnifeFork className="text-4xl text-blueRICADI" />,
       title: "Alimentação e refeição",
       description:
         "Benefícios garantindo a refeição de qualidade aos colaboradores.",
+      advancedDescription:
+        "Forneça qualidade de vida aos seus colaboradores com cartões de alimentação e refeição aceitos em milhares de estabelecimentos, garantindo refeições saudáveis e bem-estar para sua equipe.",
     },
     {
       icon: <TbDental className="text-4xl text-blueRICADI" />,
       title: "Odontológico",
       description:
         "Planos odontológicos completos para o cuidado da saúde bucal da equipe.",
+      advancedDescription:
+        "Sorriso saudável para sua equipe! Nossos planos odontológicos empresariais oferecem ampla cobertura para tratamentos preventivos, ortodontia, cirurgias e mais.",
     },
     {
       icon: <FaTruck className="text-4xl text-blueRICADI" />,
       title: "Frota e transporte",
       description:
         "Seguro para veículos empresariais, garantindo tranquilidade e proteção.",
+      advancedDescription:
+        "Mantenha sua frota protegida! Cobertura completa para veículos empresariais, garantindo assistência 24h, reposição de veículos e proteção contra roubos, colisões e danos.",
     },
     {
       icon: <BsFillChatTextFill className="text-4xl text-blueRICADI" />,
       title: "Outros",
       description:
         "Soluções personalizadas para atender às necessidades do seu negócio.",
+      advancedDescription:
+        "Cada empresa tem necessidades únicas. Oferecemos soluções personalizadas para proteger seu negócio e garantir sua tranquilidade.",
     },
   ];
 
@@ -182,6 +227,7 @@ export default function AllInsurance() {
         <Modal
           isOpen={modalOpen}
           onClose={() => setModalOpen(false)}
+          image={selectedSeguro.image || undefined}
           icon={selectedSeguro.icon}
           title={selectedSeguro.title}
           description={

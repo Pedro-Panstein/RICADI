@@ -76,7 +76,12 @@ export default function HomePage() {
               </p>
             </div>
             <div className="ml-5 xl:ml-3 2xl:ml-0">
-              <ContactButtom color={"bg-white"} textColor={"text-blueRICADI"} />
+              <ContactButtom
+                color="bg-blueRICADI"
+                textColor="text-secondWhiteRICADI"
+                hoverBorder="hover:border-secondWhiteRICADI"
+                hoverText="hover:text-secondWhiteRICADI"
+              />
             </div>
           </div>
         </div>
