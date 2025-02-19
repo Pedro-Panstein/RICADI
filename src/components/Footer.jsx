@@ -1,8 +1,16 @@
+import { useEffect, useState } from "react";
 import ContactButtom from "./ContactButtom";
 import { FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 import { IoStarOutline } from "react-icons/io5";
 
 export default function Footer() {
+  const [year, setYear] = useState();
+
+  useEffect(() => {
+    const currentYear = new Date().getFullYear();
+    setYear(currentYear);
+  }, []);
+
   return (
     <>
       <div className="mt-10 p-10">
@@ -89,6 +97,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <p className="font-asap text-sm text-gray-500 text-center mt-40 font-bold">
+          © {year} RICADI - Todos os Direitos Reservados
+        </p>
       </div>
     </>
   );
