@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         blueRICADI: "#0B2E43",
         whiteRICADI: "#D9D9D9",
-        secondBlueRICADI: "#02465D",
+        secondBlueRICADI: "#026688",
         secondWhiteRICADI: "#FFFFFF",
         textBlue: "#026688",
       },

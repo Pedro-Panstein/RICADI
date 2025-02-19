@@ -13,6 +13,8 @@ import { doc, getDoc, setDoc, increment, updateDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 import UniqueRicadi from "../components/UniqueRicadi";
 import AllInsurance from "../components/seguros/AllInsurance";
+import TellUs from "../components/TellUs";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   useEffect(() => {
@@ -138,6 +140,12 @@ export default function HomePage() {
             <span className="text-textBlue">ideal para você</span>
           </h2>
           <AllInsurance />
+        </div>
+        <div>
+          <TellUs />
+        </div>
+        <div>
+          <Footer/>
         </div>
       </div>
     </>
