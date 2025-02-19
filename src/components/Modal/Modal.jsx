@@ -6,9 +6,9 @@ export default function Modal({
   isOpen,
   onClose,
   image,
-  icon,
   title,
   description,
+  whatsappText,
 }) {
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -54,6 +54,7 @@ export default function Modal({
             textColor="text-secondWhiteRICADI"
             hoverBorder="hover:border-blueRICADI"
             hoverText="hover:text-blueRICADI"
+            whatsappText={whatsappText}
           />
         </div>
       </div>

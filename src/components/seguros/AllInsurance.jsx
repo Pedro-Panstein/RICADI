@@ -34,6 +34,8 @@ export default function AllInsurance() {
         "Seguro viagem para você explorar o mundo com tranquilidade e segurança",
       advancedDescription:
         "Viaje sem preocupações! Nosso seguro viagem oferece cobertura completa para emergências médicas, extravio de bagagens, cancelamentos inesperados e muito mais. Conte com assistência 24h em qualquer lugar do mundo e aproveite cada momento da sua viagem com segurança e tranquilidade.",
+      whatsappText:
+        "Olá! Gostaria de mais informações sobre o seguro viagem. Como funciona a cobertura e quais são os planos disponíveis?",
     },
     {
       icon: <CgFileDocument className="text-4xl text-blueRICADI" />,
@@ -41,6 +43,8 @@ export default function AllInsurance() {
       description: "Planos de consórcio para realizar seus sonhos com economia",
       advancedDescription:
         "Chegou a hora de conquistar seus sonhos! Com nossos planos de consórcio, você pode adquirir imóveis, veículos e diversos bens de forma planejada e econômica, sem juros abusivos. Flexibilidade, segurança e transparência para você investir no seu futuro.",
+      whatsappText:
+        "Olá! Quero saber mais sobre os planos de consórcio. Quais as opções disponíveis e como posso participar?",
     },
     {
       icon: <BiSolidShieldPlus className="text-4xl text-blueRICADI" />,
@@ -49,6 +53,8 @@ export default function AllInsurance() {
         "Proteja sua saúde e de sua família com os melhores planos personalizados",
       advancedDescription:
         "Sua saúde em primeiro lugar! Oferecemos planos de saúde completos, com ampla rede credenciada, cobertura nacional e atendimento de qualidade para garantir o seu bem-estar e de sua família em qualquer momento.",
+      whatsappText:
+        "Olá! Estou interessado em um plano de saúde. Poderia me passar mais detalhes sobre os planos disponíveis e os valores?",
     },
     {
       icon: <IoPhonePortraitOutline className="text-4xl text-blueRICADI" />,
@@ -57,6 +63,8 @@ export default function AllInsurance() {
         "Garanta a proteção dos seus dispositivos contra danos e imprevistos",
       advancedDescription:
         "Proteja seus dispositivos contra roubo, queda, derramamento de líquidos e outros imprevistos. Com nosso seguro para eletrônicos, você tem reposição rápida, suporte técnico especializado e cobertura nacional para seus equipamentos.",
+      whatsappText:
+        "Olá! Gostaria de contratar um seguro para meus eletrônicos. Como funciona a cobertura e quais dispositivos são aceitos?",
     },
     {
       icon: <FaCar className="text-4xl text-blueRICADI" />,
@@ -65,6 +73,8 @@ export default function AllInsurance() {
         "Seguro automotivo para cuidar do seu veículo e sua segurança",
       advancedDescription:
         "Dirija com tranquilidade! Nosso seguro automotivo oferece assistência 24h, cobertura contra roubos, colisões e danos a terceiros, além de diversos benefícios para garantir sua segurança e do seu veículo.",
+      whatsappText:
+        "Olá! Quero um seguro para meu carro. Poderia me informar os planos e coberturas disponíveis?",
     },
     {
       icon: <FaHouse className="text-4xl text-blueRICADI" />,
@@ -73,6 +83,8 @@ export default function AllInsurance() {
         "Proteja o seu lar contra imprevistos e cuide do que é mais importante",
       advancedDescription:
         "Seu lar sempre seguro! Oferecemos proteção contra incêndios, roubos, danos elétricos, desastres naturais e muito mais. Além disso, você conta com assistência residencial para emergências, como chaveiro e encanador.",
+      whatsappText:
+        "Olá! Gostaria de mais informações sobre o seguro residencial. Como funciona a cobertura?",
     },
     {
       icon: <FaHandHoldingMedical className="text-4xl text-blueRICADI" />,
@@ -81,6 +93,8 @@ export default function AllInsurance() {
         "Garanta um futuro seguro e tranquilo para sua família com nossos planos de previdência.",
       advancedDescription:
         "Planeje seu futuro com segurança! Com nossos planos de previdência, você constrói uma reserva financeira sólida para garantir estabilidade e tranquilidade para você e sua família. Flexibilidade e rentabilidade para um amanhã mais seguro.",
+      whatsappText:
+        "Olá! Estou interessado em um plano de previdência. Como funciona e quais são as vantagens?",
     },
     {
       icon: <BsFillChatTextFill className="text-4xl text-blueRICADI" />,
@@ -89,6 +103,8 @@ export default function AllInsurance() {
         "Seguros adaptados às suas necessidades, para garantir sua tranquilidade.",
       advancedDescription:
         "Soluções personalizadas para cada momento da sua vida. Nossos seguros são adaptáveis às suas necessidades específicas, garantindo proteção sob medida para você e sua família.",
+      whatsappText:
+        "Olá! Tenho uma necessidade específica de seguro. Poderia me ajudar a encontrar a melhor solução?",
     },
   ];
 
@@ -100,6 +116,8 @@ export default function AllInsurance() {
         "Gestão de benefícios para seus colaboradores com segurança.",
       advancedDescription:
         "Incentive e valorize sua equipe! Oferecemos cartões de benefícios flexíveis, permitindo personalização conforme as necessidades da empresa, proporcionando maior satisfação e retenção dos colaboradores.",
+      whatsappText:
+        "Olá! Gostaria de mais informações sobre o cartão de benefícios para empresas. Como funciona e quais são as vantagens?",
     },
     {
       icon: <GiHealthNormal className="text-4xl text-blueRICADI" />,
@@ -108,6 +126,8 @@ export default function AllInsurance() {
         "Cuide do bem-estar da sua equipe com os melhores planos de saúde.",
       advancedDescription:
         "Cuide da saúde dos seus colaboradores com os melhores planos empresariais. Cobertura ampla, atendimento de qualidade e suporte especializado para garantir o bem-estar da sua equipe.",
+      whatsappText:
+        "Olá! Estou interessado em um plano de saúde empresarial. Poderia me informar mais detalhes sobre os planos disponíveis?",
     },
     {
       icon: <TbBuilding className="text-4xl text-blueRICADI" />,
@@ -116,6 +136,8 @@ export default function AllInsurance() {
         "Proteja os bens da sua empresa contra imprevistos e riscos variados.",
       advancedDescription:
         "Segurança para seu patrimônio! Nosso seguro empresarial protege seu imóvel, equipamentos, estoques e outros bens essenciais contra incêndios, roubos, desastres naturais e demais imprevistos.",
+      whatsappText:
+        "Olá! Gostaria de saber mais sobre o seguro patrimonial para empresas. Como funciona a cobertura?",
     },
     {
       icon: <FaBriefcase className="text-4xl text-blueRICADI" />,
@@ -124,6 +146,8 @@ export default function AllInsurance() {
         "Segurança e estabilidade financeira para seus funcionários e seus familiares.",
       advancedDescription:
         "Valorize sua equipe! O seguro de vida empresarial garante proteção financeira para seus funcionários e seus familiares, oferecendo segurança e tranquilidade para todos.",
+      whatsappText:
+        "Olá! Quero mais informações sobre o seguro de vida empresarial. Como funciona e quais são os benefícios?",
     },
     {
       icon: <GiKnifeFork className="text-4xl text-blueRICADI" />,
@@ -132,6 +156,8 @@ export default function AllInsurance() {
         "Benefícios garantindo a refeição de qualidade aos colaboradores.",
       advancedDescription:
         "Forneça qualidade de vida aos seus colaboradores com cartões de alimentação e refeição aceitos em milhares de estabelecimentos, garantindo refeições saudáveis e bem-estar para sua equipe.",
+      whatsappText:
+        "Olá! Gostaria de saber mais sobre os cartões de alimentação e refeição para empresas. Como posso contratar?",
     },
     {
       icon: <TbDental className="text-4xl text-blueRICADI" />,
@@ -140,6 +166,8 @@ export default function AllInsurance() {
         "Planos odontológicos completos para o cuidado da saúde bucal da equipe.",
       advancedDescription:
         "Sorriso saudável para sua equipe! Nossos planos odontológicos empresariais oferecem ampla cobertura para tratamentos preventivos, ortodontia, cirurgias e mais.",
+      whatsappText:
+        "Olá! Estou interessado em um plano odontológico empresarial. Poderia me passar mais detalhes?",
     },
     {
       icon: <FaTruck className="text-4xl text-blueRICADI" />,
@@ -148,6 +176,8 @@ export default function AllInsurance() {
         "Seguro para veículos empresariais, garantindo tranquilidade e proteção.",
       advancedDescription:
         "Mantenha sua frota protegida! Cobertura completa para veículos empresariais, garantindo assistência 24h, reposição de veículos e proteção contra roubos, colisões e danos.",
+      whatsappText:
+        "Olá! Gostaria de um seguro para a frota da minha empresa. Como funciona a cobertura?",
     },
     {
       icon: <BsFillChatTextFill className="text-4xl text-blueRICADI" />,
@@ -156,6 +186,8 @@ export default function AllInsurance() {
         "Soluções personalizadas para atender às necessidades do seu negócio.",
       advancedDescription:
         "Cada empresa tem necessidades únicas. Oferecemos soluções personalizadas para proteger seu negócio e garantir sua tranquilidade.",
+      whatsappText:
+        "Olá! Tenho uma necessidade específica de seguro para minha empresa. Poderia me ajudar a encontrar a melhor solução?",
     },
   ];
 
@@ -213,6 +245,7 @@ export default function AllInsurance() {
           description={
             selectedSeguro.advancedDescription || selectedSeguro.description
           }
+          whatsappText={selectedSeguro.whatsappText}
         />
       )}
     </div>
