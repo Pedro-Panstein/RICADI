@@ -33,6 +33,7 @@ export default function ContactButtom({
     }
 
     setClicked(true);
+    setLoading(false);
 
     if (whatsappText !== undefined) {
       window.location.href = `https://wa.me/5547999735229?text=${whatsappText}?`;
@@ -40,6 +41,8 @@ export default function ContactButtom({
       window.location.href =
         "https://wa.me/5547999735229?text=Vi o site da RICADI e quero saber mais sobre as opções de seguro. Pode me passar mais informações!?";
     }
+
+
   };
 
   return (
