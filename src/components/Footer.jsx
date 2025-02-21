@@ -49,7 +49,7 @@ export default function Footer() {
             <br />
             <p className="font-bold text-blueRICADI">Email</p>
             <p className="font-maven-pro font-bold text-gray-500">
-              ricadiseguros@gmail.com
+              cotacao@ricadi.com.br
             </p>
           </div>
 
@@ -59,10 +59,10 @@ export default function Footer() {
               Acompanhe
             </h3>
             <div className="flex gap-4 mt-2">
-              <button className="bg-blueRICADI text-white p-3 rounded-lg text-xl">
+              <button className="bg-blueRICADI text-white p-3 rounded-lg text-xl" onClick={() => window.location.href = "https://www.instagram.com/ricadiseguros/"}>
                 <FaInstagram />
               </button>
-              <button className="bg-blueRICADI text-white p-3 rounded-lg text-xl">
+              <button className="bg-blueRICADI text-white p-3 rounded-lg text-xl" onClick={() => window.location.href = "https://www.google.com/maps/place/Ricadi+Corretora+de+Seguros/@-26.5002519,-49.0832114,17z/data=!4m6!3m5!1s0x94de959c623be733:0xb29eaa330b4e8dbe!8m2!3d-26.5001847!4d-49.0810656!16s%2Fg%2F11x082d09b?entry=ttu&g_ep=EgoyMDI1MDIxOC4wIKXMDSoASAFQAw%3D%3D"}>
                 <FaMapMarkerAlt />
               </button>
               <button className="bg-blueRICADI text-white p-3 rounded-lg text-xl">
