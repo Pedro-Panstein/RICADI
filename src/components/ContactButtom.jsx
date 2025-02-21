@@ -36,10 +36,10 @@ export default function ContactButtom({
     setLoading(false);
 
     if (whatsappText !== undefined) {
-      window.location.href = `https://wa.me/5547999735229?text=${whatsappText}?`;
+      window.location.href = `https://wa.me/5547999738291?text=${whatsappText}?`;
     } else {
       window.location.href =
-        "https://wa.me/5547999735229?text=Vi o site da RICADI e quero saber mais sobre as opções de seguro. Pode me passar mais informações!?";
+        "https://wa.me/5547999738291?text=Vi o site da RICADI e quero saber mais sobre as opções de seguro. Pode me passar mais informações!?";
     }
 
 
