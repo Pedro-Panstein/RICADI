@@ -1,14 +1,15 @@
-import { doc, getDoc, increment, setDoc, updateDoc } from "firebase/firestore";
 import { useState } from "react";
-import { db } from "../firebaseConfig";
+import emailjs from "@emailjs/browser";
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa"; // Ícones para sucesso e falha
 
 export default function TellUs() {
-  const [clicked, setClicked] = useState(false);
-  const [nome, setNome] = useState("");
+  const [from_name, setNome] = useState("");
   const [email, setEmail] = useState("");
-  const [telefone, setTelefone] = useState("");
-  const [mensagem, setMensagem] = useState("");
+  const [phone, setTelefone] = useState("");
+  const [message, setMensagem] = useState("");
   const [errors, setErrors] = useState({});
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false); // Estado para o modal de sucesso
+  const [isErrorModalOpen, setIsErrorModalOpen] = useState(false); // Estado para o modal de falha
 
   // Função para validar o nome
   const validarNome = (nome) => {
@@ -44,52 +45,68 @@ export default function TellUs() {
     return "";
   };
 
-  // Função para limpar erros
   const limparErro = (campo) => {
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [campo]: "", // Limpa o erro do campo específico
+      [campo]: "",
     }));
   };
 
   const handleClick = async () => {
-    console.log("olá")
-    // Validar todos os campos
-    const nomeError = validarNome(nome);
+    // Validação dos campos
+    const nomeError = validarNome(from_name);
     const emailError = validarEmail(email);
-    const telefoneError = validarTelefone(telefone);
-    const mensagemError = validarMensagem(mensagem);
+    const telefoneError = validarTelefone(phone);
+    const mensagemError = validarMensagem(message);
 
-    // Se houver erros, atualize o estado de erros e pare a execução
     if (nomeError || emailError || telefoneError || mensagemError) {
       setErrors({
-        nome: nomeError,
+        from_name: nomeError,
         email: emailError,
-        telefone: telefoneError,
-        mensagem: mensagemError,
+        phone: telefoneError,
+        message: mensagemError,
       });
       return;
     }
 
-    // Se todos os campos forem válidos, continue com o envio
-    const clickKey = "hasClicked";
-    localStorage.setItem(clickKey, "true");
+    // Dados a serem enviados
+    const templateParams = {
+      from_name,
+      email,
+      phone,
+      message,
+    };
 
-    const docRef = doc(db, "Banco de acessos", "RICADI");
+    console.log("Enviando e-mail...");
 
     try {
-      const docSnap = await getDoc(docRef);
+      // Envia o e-mail usando EmailJS
+      await emailjs.send(
+        "service_kxq3pgl",
+        "template_53ando9",
+        templateParams,
+        "Z8LxLQlDh547YvomB"
+      );
 
-      if (docSnap.exists()) {
-        await updateDoc(docRef, { "Cliques no botão": increment(1) });
-      } else {
-        await setDoc(docRef, { "Cliques no botão": 1 });
-      }
+      console.log("E-mail enviado com sucesso!");
+      setIsSuccessModalOpen(true); //modal de sucesso
+
+      // Limpa os campos após o envio
+      setNome("");
+      setEmail("");
+      setTelefone("");
+      setMensagem("");
+      setErrors({});
     } catch (error) {
-      console.error(error);
+      console.error("Erro ao enviar e-mail:", error);
+      setIsErrorModalOpen(true); //modal de falha
     }
+  };
 
-    setClicked(true);
+  // Função para fechar os modais
+  const closeModal = () => {
+    setIsSuccessModalOpen(false);
+    setIsErrorModalOpen(false);
   };
 
   return (
@@ -114,18 +131,18 @@ export default function TellUs() {
             <input
               type="text"
               placeholder="Digite seu nome"
-              value={nome}
+              value={from_name}
               onChange={(e) => {
                 setNome(e.target.value);
                 limparErro("nome"); // Limpa o erro do campo "nome"
               }}
               className={`bg-transparent border-2 outline-none font-maven-pro font-semibold text-blueRICADI focus:bg-blueRICADI/5 border-blueRICADI rounded-lg p-2 ${
-                errors.nome ? "border-red-700" : ""
+                errors.from_name ? "border-red-700" : ""
               }`}
             />
-            {errors.nome && (
+            {errors.from_name && (
               <span className="text-sm font-bold text-red-700 font-maven-pro">
-                {errors.nome}
+                {errors.from_name}
               </span>
             )}
           </div>
@@ -162,18 +179,18 @@ export default function TellUs() {
             <input
               type="text"
               placeholder="(xx) xxxx-xxxx"
-              value={telefone}
+              value={phone}
               onChange={(e) => {
                 setTelefone(e.target.value);
                 limparErro("telefone"); // Limpa o erro do campo "telefone"
               }}
               className={`bg-transparent border-2 outline-none font-maven-pro font-semibold text-blueRICADI focus:bg-blueRICADI/5 border-blueRICADI rounded-lg p-2 ${
-                errors.telefone ? "border-red-700" : ""
+                errors.phone ? "border-red-700" : ""
               }`}
             />
-            {errors.telefone && (
+            {errors.phone && (
               <span className="text-sm font-bold text-red-700 font-maven-pro">
-                {errors.telefone}
+                {errors.phone}
               </span>
             )}
           </div>
@@ -185,31 +202,73 @@ export default function TellUs() {
             </label>
             <textarea
               placeholder="Deixe sua Mensagem..."
-              value={mensagem}
+              value={message}
               onChange={(e) => {
                 setMensagem(e.target.value);
                 limparErro("mensagem"); // Limpa o erro do campo "mensagem"
               }}
               className={`bg-transparent border-2 outline-none font-maven-pro font-semibold text-blueRICADI focus:bg-blueRICADI/5 border-blueRICADI rounded-lg p-2 h-40 resize-none ${
-                errors.mensagem ? "border-red-700" : ""
+                errors.message ? "border-red-700" : ""
               }`}
             />
-            {errors.mensagem && (
+            {errors.message && (
               <span className="text-sm font-bold text-red-700 font-maven-pro">
-                {errors.mensagem}
+                {errors.message}
               </span>
             )}
           </div>
 
           {/* Botão Enviar */}
           <button
-            onClick={ handleClick}
+            onClick={handleClick}
             className={`px-4 py-2 text-lg mt-5 w-full font-semibold rounded-lg shadow-md font-maven-pro border-2 border-transparent transition-colors lg:text-[1.2rem] bg-blueRICADI text-whiteRICADI hover:bg-transparent hover:border-blueRICADI hover:text-blueRICADI`}
           >
             Enviar Mensagem
           </button>
         </div>
       </div>
+
+      {/* Modal de Sucesso */}
+      {isSuccessModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+          <div className="bg-white p-8 rounded-lg text-center">
+            <FaCheckCircle className="text-green-500 text-6xl mx-auto mb-4" />
+            <h2 className="text-2xl font-bold text-blueRICADI mb-4">
+              Sucesso!
+            </h2>
+            <p className="text-gray-700 mb-6">
+              Sua mensagem foi enviada com sucesso.
+            </p>
+            <button
+              onClick={closeModal}
+              className="px-6 py-2 bg-blueRICADI text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Modal de Falha */}
+      {isErrorModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+          <div className="bg-white p-8 rounded-lg text-center">
+            <FaTimesCircle className="text-red-500 text-6xl mx-auto mb-4" />
+            <h2 className="text-2xl font-bold text-blueRICADI mb-4">
+              Falha no Envio
+            </h2>
+            <p className="text-gray-700 mb-6">
+              Ocorreu um erro ao enviar sua mensagem. Tente novamente.
+            </p>
+            <button
+              onClick={closeModal}
+              className="px-6 py-2 bg-blueRICADI text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Fechar
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
