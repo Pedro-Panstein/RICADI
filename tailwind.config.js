@@ -8,6 +8,7 @@ module.exports = {
         thin: "430px",
         small: "500px",
         medium: "795px",
+        big: "1000px",
         large: "1394px",
       },
       colors: {

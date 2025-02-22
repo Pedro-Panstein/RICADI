@@ -116,7 +116,7 @@ export default function HomePage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="text-whiteRICADI p-7 pt-4 rounded-xl w-[350px] h-[270px] mx-auto bg-blueRICADI xl:w-[420px] xl:h-[320px] xl:pt-7 md:mx-0"
+                className="text-whiteRICADI p-7 pt-4 rounded-xl mx-5 w-[330px] h-[100%] max-h-[300px] bg-blueRICADI xl:w-[420px] xl:h-[320px] xl:pt-7 md:mx-0"
               >
                 <p className="text-[4rem]">{item.icon}</p>
                 <h3 className="mt-4 text-xl font-bold text-start font-asap xl:text-2xl xl:mt-7">
@@ -129,23 +129,29 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-        {/* O que torna a ricadi única */}
-        <div>
-          <UniqueRicadi />
-        </div>
         {/* Seguros */}
-        <div className="p-2 mt-32 text-center ">
+        <div className="p-2 mt-32 text-center mb-32">
           <h2 className="p-5 text-2xl font-bold font-asap text-blueRICADI">
             Encontre o seguro{" "}
             <span className="text-textBlue">ideal para você</span>
           </h2>
           <AllInsurance />
         </div>
+        {/* O que torna a ricadi única */}
         <div>
+          <UniqueRicadi />
+        </div>
+        <div className="flex justify-center items-center w-full h-[100px] bg-gradient-to-bl from-[#0B2E43] xl:via-[#134564] xl:to-[#0B2E43] to-[#134564] big:bg-none">
+          <div className="text-blueRICADI text-2xl font-bold font-asap hidden big:block big:mt-10">
+            Quer saber sobre algo{" "}
+            <span className="text-textBlue">Especifico?</span>
+          </div>
+        </div>
+        <div className="big:mt-10">
           <TellUs />
         </div>
         <div>
-          <Footer/>
+          <Footer />
         </div>
       </div>
     </>

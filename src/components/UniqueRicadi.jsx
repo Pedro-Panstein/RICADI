@@ -17,14 +17,14 @@ export default function UniqueRicadi() {
 
   return (
     <>
-      <div className="mt-32 text-center">
+      <div id="unique" className="mt-32 text-center">
         <h2 className="text-2xl font-bold font-asap text-blueRICADI">
           O que torna a <span className="text-textBlue">RICADI</span> única?
         </h2>
         <div
           id="primary"
           style={{ display: "flex" }}
-          className="relative flex flex-wrap justify-center items-center gap-20 mt-10 py-20 p-5 bg-gradient-to-br from-[#134564] xl:via-[#0B2E43] xl:to-[#134564] to-[#0B2E43]  h-[600px]"
+          className="relative flex flex-wrap justify-center items-center gap-20 mt-10 py-20 p-5 bg-gradient-to-br from-[#134564] xl:via-[#0B2E43] xl:to-[#134564] to-[#0B2E43] h-[600px]"
         >
           {[
             {
@@ -48,7 +48,7 @@ export default function UniqueRicadi() {
               <h3 className="my-5 text-2xl font-bold font-asap">
                 {benefit.title}
               </h3>
-              <p className="text-md text-justify opacity-60 w-[330px] font-maven-pro">
+              <p className="text-md text-justify opacity-60 w-[100%] max-w-[330px] font-maven-pro">
                 {benefit.description}
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function UniqueRicadi() {
               <h3 className="my-5 text-2xl font-bold font-asap">
                 {benefit.title}
               </h3>
-              <p className="text-md text-justify opacity-60 w-[330px] font-maven-pro">
+              <p className="text-md text-justify opacity-60 w-[100%] max-w-[330px] font-maven-pro">
                 {benefit.description}
               </p>
             </div>
@@ -101,7 +101,7 @@ export default function UniqueRicadi() {
                 <h3 className="my-5 text-2xl font-bold font-asap">
                   {benefit.title}
                 </h3>
-                <p className="text-md text-justify opacity-60 w-[330px] font-maven-pro">
+                <p className="text-md text-justify opacity-60 w-[100%] max-w-[330px] font-maven-pro">
                   {benefit.description}
                 </p>
               </div>
@@ -160,7 +160,7 @@ export default function UniqueRicadi() {
               <h3 className="my-5 text-2xl font-bold font-asap">
                 {benefit.title}
               </h3>
-              <p className="text-md text-justify opacity-60 w-[330px] font-maven-pro">
+              <p className="text-md text-justify opacity-60 w-[100%] max-w-[330px] font-maven-pro">
                 {benefit.description}
               </p>
             </div>
