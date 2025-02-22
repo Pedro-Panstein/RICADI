@@ -13,9 +13,9 @@ export default function Footer() {
 
   return (
     <>
-      <div className="mt-10 p-10">
-        <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-          <h2 className="mb-5 sm:mb-0 text-2xl text-blueRICADI font-asap font-bold">
+      <div className="p-10 mt-10">
+        <div className="container flex flex-col items-center justify-between mx-auto sm:flex-row">
+          <h2 className="mb-5 text-2xl font-bold sm:mb-0 text-blueRICADI font-asap">
             Gostou da <span className="text-secondBlueRICADI">RICADI</span>?
           </h2>
           <ContactButtom
@@ -26,29 +26,32 @@ export default function Footer() {
           />
         </div>
 
-        <div className="container mt-20 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-800">
+        <div className="container grid grid-cols-1 gap-8 mx-auto mt-20 text-gray-800 sm:grid-cols-2 lg:grid-cols-3">
           {/* Atendimento */}
           <div>
             <h3 className="text-2xl font-bold text-blueRICADI font-asap">
               Atendimento
             </h3>
-            <p className="font-maven-pro font-bold text-gray-500">
+            <p className="font-bold text-gray-500 font-maven-pro">
               Segunda a sexta
             </p>
-            <p className="font-maven-pro font-bold text-gray-500">
+            <p className="font-bold text-gray-500 font-maven-pro">
               08:00 às 12:00
             </p>
-            <p className="font-maven-pro font-bold text-gray-500">
+            <p className="font-bold text-gray-500 font-maven-pro">
               13:30 às 17:30
             </p>
             <br />
             <p className="font-bold text-blueRICADI">Telefone</p>
-            <p className="font-maven-pro font-bold text-gray-500">
+            <p className="font-bold text-gray-500 font-maven-pro">
               (47) 99973-5229
             </p>
             <br />
             <p className="font-bold text-blueRICADI">Email</p>
-            <p className="font-maven-pro font-bold text-gray-500">
+            <p className="font-bold text-gray-500 font-maven-pro">
+              contato@ricadi.com.br
+            </p>
+            <p className="font-bold text-gray-500 font-maven-pro">
               cotacao@ricadi.com.br
             </p>
           </div>
@@ -59,17 +62,29 @@ export default function Footer() {
               Acompanhe
             </h3>
             <div className="flex gap-4 mt-2">
-              <button className="bg-blueRICADI text-white p-3 rounded-lg text-xl" onClick={() => window.location.href = "https://www.instagram.com/ricadiseguros/"}>
+              <button
+                className="p-3 text-xl text-white rounded-lg bg-blueRICADI"
+                onClick={() =>
+                  (window.location.href =
+                    "https://www.instagram.com/ricadiseguros/")
+                }
+              >
                 <FaInstagram />
               </button>
-              <button className="bg-blueRICADI text-white p-3 rounded-lg text-xl" onClick={() => window.location.href = "https://www.google.com/maps/place/Ricadi+Corretora+de+Seguros/@-26.5002519,-49.0832114,17z/data=!4m6!3m5!1s0x94de959c623be733:0xb29eaa330b4e8dbe!8m2!3d-26.5001847!4d-49.0810656!16s%2Fg%2F11x082d09b?entry=ttu&g_ep=EgoyMDI1MDIxOC4wIKXMDSoASAFQAw%3D%3D"}>
+              <button
+                className="p-3 text-xl text-white rounded-lg bg-blueRICADI"
+                onClick={() =>
+                  (window.location.href =
+                    "https://www.google.com/maps/place/Ricadi+Corretora+de+Seguros/@-26.5002519,-49.0832114,17z/data=!4m6!3m5!1s0x94de959c623be733:0xb29eaa330b4e8dbe!8m2!3d-26.5001847!4d-49.0810656!16s%2Fg%2F11x082d09b?entry=ttu&g_ep=EgoyMDI1MDIxOC4wIKXMDSoASAFQAw%3D%3D")
+                }
+              >
                 <FaMapMarkerAlt />
               </button>
-              <button className="bg-blueRICADI text-white p-3 rounded-lg text-xl">
+              <button className="p-3 text-xl text-white rounded-lg bg-blueRICADI">
                 <IoStarOutline />
               </button>
             </div>
-            <p className="mt-2 font-maven-pro font-bold text-gray-500">
+            <p className="mt-2 font-bold text-gray-500 font-maven-pro">
               Suporte
             </p>
           </div>
@@ -79,7 +94,7 @@ export default function Footer() {
             <h3 className="text-2xl font-bold text-blueRICADI font-asap">
               Venha até nós
             </h3>
-            <p className="flex items-center gap-2 font-maven-pro font-bold text-gray-500">
+            <p className="flex items-center gap-2 font-bold text-gray-500 font-maven-pro">
               <FaMapMarkerAlt className="text-blueRICADI" />
               Jaraguá do Sul - SC
             </p>
@@ -97,7 +112,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <p className="font-asap text-sm text-gray-500 text-center mt-40 font-bold">
+        <p className="mt-40 text-sm font-bold text-center text-gray-500 font-asap">
           © {year} RICADI - Todos os Direitos Reservados
         </p>
       </div>

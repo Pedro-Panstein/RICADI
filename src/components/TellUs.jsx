@@ -53,6 +53,7 @@ export default function TellUs() {
   };
 
   const handleClick = async () => {
+    console.log("olá")
     // Validar todos os campos
     const nomeError = validarNome(nome);
     const emailError = validarEmail(email);
@@ -97,17 +98,17 @@ export default function TellUs() {
         id="bannerTell"
         className="flex justify-center items-center bg-cover bg-center bg-no-repeat bg-gradient-to-br from-[#134564] xl:via-[#0B2E43] xl:to-[#134564] to-[#0B2E43] h-[900px]"
       >
-        <div className="bg-whiteRICADI p-5 md:p-10 rounded-lg flex justify-center items-center flex-col mx-5">
-          <h2 className="font-asap text-3xl font-bold text-blueRICADI">
+        <div className="flex flex-col items-center justify-center p-5 mx-5 rounded-lg bg-whiteRICADI md:p-10">
+          <h2 className="text-3xl font-bold font-asap text-blueRICADI">
             Fale conosco
           </h2>
-          <p className="text-blueRICADI/70 font-semibold pt-5">
+          <p className="pt-5 font-semibold text-blueRICADI/70">
             Entre em contato e tire suas dúvidas com a nossa equipe
           </p>
 
           {/* Campo Nome */}
-          <div className="flex flex-col gap-1 pt-5 w-full">
-            <label className="font-maven-pro text-blueRICADI font-semibold">
+          <div className="flex flex-col w-full gap-1 pt-5">
+            <label className="font-semibold font-maven-pro text-blueRICADI">
               Nome
             </label>
             <input
@@ -123,15 +124,15 @@ export default function TellUs() {
               }`}
             />
             {errors.nome && (
-              <span className="text-red-700 text-sm font-bold font-maven-pro">
+              <span className="text-sm font-bold text-red-700 font-maven-pro">
                 {errors.nome}
               </span>
             )}
           </div>
 
           {/* Campo E-mail */}
-          <div className="flex flex-col gap-2 pt-5 w-full">
-            <label className="font-maven-pro text-blueRICADI font-semibold">
+          <div className="flex flex-col w-full gap-2 pt-5">
+            <label className="font-semibold font-maven-pro text-blueRICADI">
               Email
             </label>
             <input
@@ -147,15 +148,15 @@ export default function TellUs() {
               }`}
             />
             {errors.email && (
-              <span className="text-red-700 text-sm font-bold font-maven-pro">
+              <span className="text-sm font-bold text-red-700 font-maven-pro">
                 {errors.email}
               </span>
             )}
           </div>
 
           {/* Campo Telefone */}
-          <div className="flex flex-col gap-2 pt-5 w-full">
-            <label className="font-maven-pro text-blueRICADI font-semibold">
+          <div className="flex flex-col w-full gap-2 pt-5">
+            <label className="font-semibold font-maven-pro text-blueRICADI">
               Telefone
             </label>
             <input
@@ -171,15 +172,15 @@ export default function TellUs() {
               }`}
             />
             {errors.telefone && (
-              <span className="text-red-700 text-sm font-bold font-maven-pro">
+              <span className="text-sm font-bold text-red-700 font-maven-pro">
                 {errors.telefone}
               </span>
             )}
           </div>
 
           {/* Campo Mensagem */}
-          <div className="flex flex-col gap-2 pt-5 w-full">
-            <label className="font-maven-pro text-blueRICADI font-semibold">
+          <div className="flex flex-col w-full gap-2 pt-5">
+            <label className="font-semibold font-maven-pro text-blueRICADI">
               Mensagem
             </label>
             <textarea
@@ -194,7 +195,7 @@ export default function TellUs() {
               }`}
             />
             {errors.mensagem && (
-              <span className="text-red-700 text-sm font-bold font-maven-pro">
+              <span className="text-sm font-bold text-red-700 font-maven-pro">
                 {errors.mensagem}
               </span>
             )}
@@ -202,7 +203,7 @@ export default function TellUs() {
 
           {/* Botão Enviar */}
           <button
-            onClick={() => handleClick}
+            onClick={ handleClick}
             className={`px-4 py-2 text-lg mt-5 w-full font-semibold rounded-lg shadow-md font-maven-pro border-2 border-transparent transition-colors lg:text-[1.2rem] bg-blueRICADI text-whiteRICADI hover:bg-transparent hover:border-blueRICADI hover:text-blueRICADI`}
           >
             Enviar Mensagem
