@@ -2,7 +2,7 @@
 
 Este é o repositório do site da **RICADI**, uma corretora de seguros comprometida em oferecer tranquilidade e segurança para você e sua família.
 
-Acesse nosso site online em: **[ricadi.com.br](https://ricadi.vercel.app/)**
+Acesse nosso site online em: **[ricadi.com.br](https://ricadi.com.br)**
 
 ---
 
@@ -81,7 +81,7 @@ ricadi-site/
 
 ## RICADI - Corretora de Seguros
 
-- **Site Oficial:** [ricadi.com.br](https://ricadi.vercel.app/)
+- **Site Oficial:** [ricadi.com.br](https://ricadi.com.br)
 - **Email:** contato@ricadi.com.br
 - **Email:** cotacao@ricadi.com.br
 - **Telefone:** +55 (47) 99973-8291
