@@ -11,6 +11,25 @@ export default function TellUs() {
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false); // Estado para o modal de sucesso
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false); // Estado para o modal de falha
 
+  // Função para formatar o telefone
+  const formatarTelefone = (valor) => {
+    // Remove tudo que não é número
+    const apenasNumeros = valor.replace(/\D/g, "");
+
+    // Aplica a formatação
+    if (apenasNumeros.length <= 10) {
+      // Formato para telefone fixo: (XX) XXXX-XXXX
+      return apenasNumeros
+        .replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3")
+        .substring(0, 14);
+    } else {
+      // Formato para celular: (XX) XXXXX-XXXX
+      return apenasNumeros
+        .replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3")
+        .substring(0, 15);
+    }
+  };
+
   // Função para validar o nome
   const validarNome = (nome) => {
     if (nome.length < 3) {
@@ -178,10 +197,11 @@ export default function TellUs() {
             </label>
             <input
               type="text"
-              placeholder="(xx) xxxx-xxxx"
+              placeholder="(xx) xxxxx-xxxx"
               value={phone}
               onChange={(e) => {
-                setTelefone(e.target.value);
+                const valorFormatado = formatarTelefone(e.target.value);
+                setTelefone(valorFormatado); // Atualiza o estado com o valor formatado
                 limparErro("telefone"); // Limpa o erro do campo "telefone"
               }}
               className={`bg-transparent border-2 outline-none font-maven-pro font-semibold text-blueRICADI focus:bg-blueRICADI/5 border-blueRICADI rounded-lg p-2 ${
