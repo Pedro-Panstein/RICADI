@@ -175,7 +175,7 @@ export default function TellUs() {
               value={from_name}
               onChange={(e) => {
                 setNome(e.target.value);
-                limparErro("nome"); // Limpa o erro do campo "nome"
+                limparErro("from_name"); // Corrigido para "from_name"
               }}
               className={`bg-transparent border-2 outline-none font-maven-pro font-semibold text-blueRICADI focus:bg-blueRICADI/5 border-blueRICADI rounded-lg p-2 ${
                 errors.from_name ? "border-red-700" : ""
@@ -199,7 +199,7 @@ export default function TellUs() {
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
-                limparErro("email"); // Limpa o erro do campo "email"
+                limparErro("email"); // Já está correto
               }}
               className={`bg-transparent border-2 outline-none font-maven-pro font-semibold text-blueRICADI focus:bg-blueRICADI/5 border-blueRICADI rounded-lg p-2 ${
                 errors.email ? "border-red-700" : ""
@@ -223,8 +223,8 @@ export default function TellUs() {
               value={phone}
               onChange={(e) => {
                 const valorFormatado = formatarTelefone(e.target.value);
-                setTelefone(valorFormatado); // Atualiza o estado com o valor formatado
-                limparErro("telefone"); // Limpa o erro do campo "telefone"
+                setTelefone(valorFormatado);
+                limparErro("phone"); // Corrigido para "phone"
               }}
               className={`bg-transparent border-2 outline-none font-maven-pro font-semibold text-blueRICADI focus:bg-blueRICADI/5 border-blueRICADI rounded-lg p-2 ${
                 errors.phone ? "border-red-700" : ""
@@ -247,7 +247,7 @@ export default function TellUs() {
               value={message}
               onChange={(e) => {
                 setMensagem(e.target.value);
-                limparErro("mensagem"); // Limpa o erro do campo "mensagem"
+                limparErro("message"); // Corrigido para "message"
               }}
               className={`bg-transparent border-2 outline-none font-maven-pro font-semibold text-blueRICADI focus:bg-blueRICADI/5 border-blueRICADI rounded-lg p-2 h-40 resize-none ${
                 errors.message ? "border-red-700" : ""

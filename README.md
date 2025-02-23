@@ -2,7 +2,7 @@
 
 Este é o repositório do site da **RICADI**, uma corretora de seguros comprometida em oferecer tranquilidade e segurança para você e sua família.
 
-Acesse nosso site online em: **[ricadi.com](https://ricadi.vercel.app/)**
+Acesse nosso site online em: **[ricadi.com.br](https://ricadi.vercel.app/)**
 
 ---
 
@@ -10,8 +10,8 @@ Acesse nosso site online em: **[ricadi.com](https://ricadi.vercel.app/)**
 
 O projeto foi desenvolvido com as seguintes tecnologias:
 
-- **Angular**: Framework para construção de interfaces dinâmicas.
-- **TypeScript**: Superset do JavaScript para código mais seguro e escalável.
+- **React**: Biblioteca JavaScript para construção de interfaces dinâmicas e eficientes.
+- **JavaScript**: Linguagem principal do desenvolvimento frontend.
 - **Firebase**: Backend e banco de dados para autenticação e armazenamento.
 - **HTML5 e TailwindCSS**: Estrutura e design responsivo para uma experiência intuitiva.
 
@@ -23,10 +23,17 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 ✔️ **Por que Escolher a RICADI?** – Destaques sobre os diferenciais da corretora.  
 ✔️ **Catálogo de Seguros** – Lista dos tipos de seguros oferecidos, com informações detalhadas.  
 ✔️ **Contato** – Formulário para solicitação de cotação e suporte ao cliente.
+✔️ **Responsividade** – Layout totalmente adaptável para dispositivos móveis e desktop.
 
 ---
 
 ## Como Rodar o Projeto
+
+### Pré-requisitos
+
+Certifique-se de ter instalado:
+
+- Node.js e npm (ou yarn)
 
 1. Clone o repositório:
 
@@ -49,15 +56,32 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 4. Inicie o servidor de desenvolvimento:
 
    ```bash
-   npm run dev
+   npm start
    ```
 
 5. Abra o navegador em: http://localhost:3000
+
+## Estrutura do Projeto
+
+```bash
+ricadi-site/
+├── public/          # Arquivos públicos (favicon, imagens, etc.)
+├── src/
+│   ├── components/  # Componentes reutilizáveis
+│   ├── pages/       # Página principal do site
+│   ├── assets/      # Imagens do site
+│   ├── styles/      # Arquivos de estilo (TailwindCSS)
+│   ├── index.js     # Ponto de entrada da aplicação
+├── .gitignore
+├── package.json
+├── README.md
+```
 
 ## Autor
 
 ## RICADI - Corretora de Seguros
 
-- **Site Oficial:** [ricadi.com](https://ricadi.vercel.app/)
-- **Email:** ricadiseguros@gmail.com
-- **Telefone:** (47) 99973-5229
+- **Site Oficial:** [ricadi.com.br](https://ricadi.vercel.app/)
+- **Email:** contato@ricadi.com.br
+- **Email:** cotacao@ricadi.com.br
+- **Telefone:** +55 (47) 99973-8291
