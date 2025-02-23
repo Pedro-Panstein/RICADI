@@ -218,7 +218,12 @@ export default function HomePage() {
                     melhores soluções em seguros.
                   </p>
                 </div>
-                <button className="text-whiteRICADI text-sm font-bold hover:bg-white/10 hover:scale-[1.01] font-asap w-full border-2 border-whiteRICADI rounded-md p-2 max-w-[400px] xl:bg-whiteRICADI xl:text-blueRICADI xl:mt-10 xl:max-w-[880px] xl:p-4 xl:font-extrabold xl:text-xl xl:hover:bg-transparent xl:hover:text-white transition-colors xl:border-[3px]">
+                <button
+                  onClick={() =>
+                    (window.location.href = "https://cotacao.ricadi.com.br")
+                  }
+                  className="text-whiteRICADI text-sm font-bold hover:bg-white/10 hover:scale-[1.01] font-asap w-full border-2 border-whiteRICADI rounded-md p-2 max-w-[400px] xl:bg-whiteRICADI xl:text-blueRICADI xl:mt-10 xl:max-w-[880px] xl:p-4 xl:font-extrabold xl:text-xl xl:hover:bg-transparent xl:hover:text-white transition-colors xl:border-[3px]"
+                >
                   Solicite sua cotação
                 </button>
                 <p className="text-whiteRICADI text-[10px] text-center mt-5 font-maven-pro thin:text-[15px] max-w-[400px] xl:hidden">
