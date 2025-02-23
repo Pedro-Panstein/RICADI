@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 import ContactButtom from "../ContactButtom";
+import { motion } from "framer-motion";
 
 export default function Modal({
   isOpen,
@@ -30,7 +31,13 @@ export default function Modal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative w-full max-w-[500px] p-6 m-5 bg-white rounded-lg shadow-lg">
+      <motion.div
+        initial={{ scale: 0.6, y: 0 }}
+        whileInView={{ scale: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        viewport={{ once: true }}
+        className="relative w-full max-w-[500px] p-6 m-5 bg-white rounded-lg shadow-lg"
+      >
         <button className="absolute text-xl top-2 right-2" onClick={onClose}>
           <IoClose className="text-3xl text-red-600 sm:text-5xl" />
         </button>
@@ -57,7 +64,7 @@ export default function Modal({
             whatsappText={whatsappText}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -15,6 +15,7 @@ import { PiAirplaneBold } from "react-icons/pi";
 import { GiHealthNormal, GiKnifeFork } from "react-icons/gi";
 import { TbBuilding, TbDental } from "react-icons/tb";
 import Modal from "../Modal/Modal";
+import { motion } from "framer-motion";
 
 export default function AllInsurance() {
   const [tipoSeguro, setTipoSeguro] = useState("pessoal");
@@ -234,9 +235,19 @@ export default function AllInsurance() {
         </button>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-5 lg:justify-start lg:px-[120px]">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: false }}
+        className="flex flex-wrap items-center justify-center gap-5 lg:justify-start lg:px-[120px]"
+      >
         {segurosVisiveis.map((seguro, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: index * 0.2 }}
+            viewport={{ once: false }}
             key={index}
             className="flex relative flex-col items-center p-4 text-center rounded-lg shadow-md bg-[#F0F0F0] w-[150px] h-[170px] small:w-[200px] small:h-[210px] small:text-[14px] small:cursor-pointer lg:w-[240px] lg:h-[200px]"
             onClick={() => handleOpenModal(seguro)}
@@ -251,9 +262,9 @@ export default function AllInsurance() {
             <button className="small:hidden absolute bottom-3 text-secondWhiteRICADI bg-blueRICADI font-asap font-bold w-[100px] h-[30px] rounded-md mt-2 hover:scale-[1.01] shadow-md">
               Ver mais
             </button>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {modalOpen && selectedSeguro && (
         <Modal

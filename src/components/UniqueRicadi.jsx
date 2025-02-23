@@ -3,6 +3,7 @@ import { FiShield } from "react-icons/fi";
 import { GoPeople } from "react-icons/go";
 import { HiArrowPathRoundedSquare } from "react-icons/hi2";
 import { MdOutlineSpeed, MdSupportAgent } from "react-icons/md";
+import { motion } from "framer-motion";
 
 import js from "../script/carousel"; // Importando o script JS798
 import { IoIosArrowForward } from "react-icons/io";
@@ -40,7 +41,11 @@ export default function UniqueRicadi() {
                 "Segurança é a nossa prioridade. Trabalhamos apenas com seguradoras confiáveis e oferecemos planos que protegem você e seu patrimônio, proporcionando tranquilidade em qualquer situação.",
             },
           ].map((benefit, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: index * 0.5 + 0.5 }}
+              viewport={{ once: false }}
               key={index}
               className="flex flex-col items-center text-center text-white h-[300px] xl:p-6"
             >
@@ -51,7 +56,7 @@ export default function UniqueRicadi() {
               <p className="text-md text-justify opacity-60 w-[100%] max-w-[330px] font-maven-pro">
                 {benefit.description}
               </p>
-            </div>
+            </motion.div>
           ))}
           {[
             {
@@ -61,7 +66,11 @@ export default function UniqueRicadi() {
                 "Sabemos que seu tempo é valioso. Por isso, tornamos a contratação e o gerenciamento do seu seguro descomplicados, com processos rápidos e eficientes, sem burocracia desnecessária.",
             },
           ].map((benefit, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: index * 0.5 + 0.5 }}
+              viewport={{ once: false }}
               key={index}
               className="flex flex-col items-center text-center text-white h-[300px] xl:p-6 medium:hidden large:flex"
             >
@@ -72,7 +81,7 @@ export default function UniqueRicadi() {
               <p className="text-md text-justify opacity-60 w-[100%] max-w-[330px] font-maven-pro">
                 {benefit.description}
               </p>
-            </div>
+            </motion.div>
           ))}
 
           <div
@@ -93,7 +102,11 @@ export default function UniqueRicadi() {
                   "Nossa equipe é formada por especialistas no setor de seguros, sempre atualizados para oferecer as melhores soluções e garantir que você tome decisões informadas e seguras.",
               },
             ].map((benefit, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: index * 0.5 + 0.5 }}
+                viewport={{ once: false }}
                 key={index}
                 className="flex flex-col items-center text-center text-white xl:p-6"
               >
@@ -104,7 +117,7 @@ export default function UniqueRicadi() {
                 <p className="text-md text-justify opacity-60 w-[100%] max-w-[330px] font-maven-pro">
                   {benefit.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
           <div className="absolute left-10">
@@ -152,7 +165,11 @@ export default function UniqueRicadi() {
                 "Nossa equipe é formada por especialistas no setor de seguros, sempre atualizados para oferecer as melhores soluções e garantir que você tome decisões informadas e seguras.",
             },
           ].map((benefit, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: index * 0.5 + 0.5 }}
+              viewport={{ once: false }}
               key={index}
               className="flex flex-col items-center p-6 text-center text-white h-[300px] "
             >
@@ -163,7 +180,7 @@ export default function UniqueRicadi() {
               <p className="text-md text-justify opacity-60 w-[100%] max-w-[330px] font-maven-pro">
                 {benefit.description}
               </p>
-            </div>
+            </motion.div>
           ))}
           <div className="absolute left-10">
             <IoIosArrowForward

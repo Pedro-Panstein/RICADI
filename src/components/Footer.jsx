@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ContactButtom from "./ContactButtom";
 import { FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 import { IoStarOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   const [year, setYear] = useState();
@@ -15,20 +16,38 @@ export default function Footer() {
     <>
       <div className="p-10 mt-10">
         <div className="container flex flex-col items-center justify-between mx-auto sm:flex-row">
-          <h2 className="mb-5 text-2xl font-bold sm:mb-0 text-blueRICADI font-asap">
+          <motion.h2
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false }}
+            className="mb-5 text-2xl font-bold sm:mb-0 text-blueRICADI font-asap"
+          >
             Gostou da <span className="text-secondBlueRICADI">RICADI</span>?
-          </h2>
-          <ContactButtom
-            color="bg-blueRICADI"
-            textColor="text-secondWhiteRICADI"
-            hoverBorder="hover:border-blueRICADI"
-            hoverText="hover:text-blueRICADI"
-          />
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false }}
+          >
+            <ContactButtom
+              color="bg-blueRICADI"
+              textColor="text-secondWhiteRICADI"
+              hoverBorder="hover:border-blueRICADI"
+              hoverText="hover:text-blueRICADI"
+            />
+          </motion.div>
         </div>
 
         <div className="container grid grid-cols-1 gap-8 mx-auto mt-20 text-gray-800 sm:grid-cols-2 lg:grid-cols-3">
           {/* Atendimento */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: false }}
+          >
             <h3 className="text-2xl font-bold text-blueRICADI font-asap">
               Atendimento
             </h3>
@@ -44,7 +63,7 @@ export default function Footer() {
             <br />
             <p className="font-bold text-blueRICADI">Telefone</p>
             <p className="font-bold text-gray-500 font-maven-pro">
-              (47) 99973-5229
+              +55 (47) 99973-8291
             </p>
             <br />
             <p className="font-bold text-blueRICADI">Email</p>
@@ -54,10 +73,16 @@ export default function Footer() {
             <p className="font-bold text-gray-500 font-maven-pro">
               cotacao@ricadi.com.br
             </p>
-          </div>
+          </motion.div>
 
           {/* Acompanhe */}
-          <div className="flex flex-col items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: false }}
+            className="flex flex-col items-start"
+          >
             <h3 className="text-2xl font-bold text-blueRICADI font-asap">
               Acompanhe
             </h3>
@@ -87,10 +112,15 @@ export default function Footer() {
             <p className="mt-2 font-bold text-gray-500 font-maven-pro">
               Suporte
             </p>
-          </div>
+          </motion.div>
 
           {/* Localização */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: false }}
+          >
             <h3 className="text-2xl font-bold text-blueRICADI font-asap">
               Venha até nós
             </h3>
@@ -110,11 +140,17 @@ export default function Footer() {
                 className="w-full h-32 rounded-lg"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
-        <p className="mt-40 text-sm font-bold text-center text-gray-500 font-asap">
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false }}
+          className="mt-40 text-sm font-bold text-center text-gray-500 font-asap"
+        >
           © {year} RICADI - Todos os Direitos Reservados
-        </p>
+        </motion.p>
       </div>
     </>
   );

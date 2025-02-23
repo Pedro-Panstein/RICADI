@@ -1,6 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa"; // Ícones para sucesso e falha
+import { motion } from "framer-motion";
 
 export default function TellUs() {
   const [from_name, setNome] = useState("");
@@ -135,15 +136,27 @@ export default function TellUs() {
   return (
     <>
       {loading && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+        <motion.div
+          initial={{ opacity: 0, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60"
+        >
           <div className="w-16 h-16 border-4 border-white rounded-full animate-spin border-t-transparent"></div>
-        </div>
+        </motion.div>
       )}
       <div
         id="bannerTell"
         className="flex justify-center items-center bg-cover bg-center bg-no-repeat bg-gradient-to-br from-[#134564] xl:via-[#0B2E43] xl:to-[#134564] to-[#0B2E43] h-[900px]"
       >
-        <div className="flex flex-col items-center justify-center p-5 mx-5 rounded-lg bg-whiteRICADI md:p-10">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
+          className="flex flex-col items-center justify-center p-5 mx-5 rounded-lg bg-whiteRICADI md:p-10"
+        >
           <h2 className="text-3xl font-bold font-asap text-blueRICADI">
             Fale conosco
           </h2>
@@ -254,7 +267,7 @@ export default function TellUs() {
           >
             Enviar Mensagem
           </button>
-        </div>
+        </motion.div>
       </div>
 
       {/* Modal de Sucesso */}
