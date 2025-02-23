@@ -10,6 +10,7 @@ export default function TellUs() {
   const [errors, setErrors] = useState({});
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false); // Estado para o modal de sucesso
   const [isErrorModalOpen, setIsErrorModalOpen] = useState(false); // Estado para o modal de falha
+  const [loading, setLoading] = useState(false);
 
   // Função para formatar o telefone
   const formatarTelefone = (valor) => {
@@ -88,6 +89,8 @@ export default function TellUs() {
       return;
     }
 
+    setLoading(true); //inicia o loading
+
     // Dados a serem enviados
     const templateParams = {
       from_name,
@@ -108,6 +111,7 @@ export default function TellUs() {
       );
 
       console.log("E-mail enviado com sucesso!");
+      setLoading(false); //finaliza o loading
       setIsSuccessModalOpen(true); //modal de sucesso
 
       // Limpa os campos após o envio
@@ -130,6 +134,11 @@ export default function TellUs() {
 
   return (
     <>
+      {loading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+          <div className="w-16 h-16 border-4 border-white rounded-full animate-spin border-t-transparent"></div>
+        </div>
+      )}
       <div
         id="bannerTell"
         className="flex justify-center items-center bg-cover bg-center bg-no-repeat bg-gradient-to-br from-[#134564] xl:via-[#0B2E43] xl:to-[#134564] to-[#0B2E43] h-[900px]"
