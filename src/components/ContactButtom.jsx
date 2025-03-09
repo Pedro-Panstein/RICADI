@@ -33,16 +33,17 @@ export default function ContactButtom({
     }
 
     setClicked(true);
-    setLoading(false);
 
     if (whatsappText !== undefined) {
-      window.location.href = `https://wa.me/5547999738291?text=${whatsappText}?`;
+      window.open(`https://wa.me/5547999738291?text=${whatsappText}`, "_blank");
+      setLoading(false);
     } else {
-      window.location.href =
-        "https://wa.me/5547999738291?text=Vi o site da RICADI e quero saber mais sobre as opções de seguro. Pode me passar mais informações!?";
+      window.open(
+        `https://wa.me/5547999738291?text=Vi o site da RICADI e quero saber mais sobre as opções de seguro. Pode me passar mais informações!`,
+        "_blank"
+      );
+      setLoading(false);
     }
-
-
   };
 
   return (

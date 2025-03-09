@@ -16,7 +16,7 @@ import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 
 //Imagens
-import ricadiLogotipo from "../assets/RICADI logotipo.png";
+import ricadiLogotipo from "../assets/Texto RICADI.png";
 import ricadiFormsLogotipo from "../assets/bannerRicadiLogotipo.svg";
 import ricadiForms from "../assets/bannerFormulario.png";
 
@@ -97,6 +97,20 @@ export default function HomePage() {
             </div>
           </motion.div>
         </div>
+        {/* Seguros */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: false }}
+          className="p-2 mt-32 mb-32 text-center"
+        >
+          <h2 className="p-5 text-2xl font-bold font-asap text-blueRICADI">
+            Encontre o seguro{" "}
+            <span className="text-textBlue">ideal para você</span>
+          </h2>
+          <AllInsurance />
+        </motion.div>
         {/* Por que escolher a ricadi */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -148,33 +162,19 @@ export default function HomePage() {
             ))}
           </div>
         </motion.div>
-        {/* Seguros */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: false }}
-          className="p-2 mt-32 text-center mb-32"
-        >
-          <h2 className="p-5 text-2xl font-bold font-asap text-blueRICADI">
-            Encontre o seguro{" "}
-            <span className="text-textBlue">ideal para você</span>
-          </h2>
-          <AllInsurance />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
-          className="flex flex-col justify-center items-center"
+          className="flex flex-col items-center justify-center mt-32"
         >
           <motion.h2
             initial={{ opacity: 0, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false }}
-            className="text-2xl font-bold font-asap text-blueRICADI mx-5 text-center hidden xl:block"
+            className="hidden mx-5 text-2xl font-bold text-center font-asap text-blueRICADI xl:block"
           >
             Tem alguma <span className="text-textBlue">cotação</span> em mente?
           </motion.h2>
@@ -183,36 +183,32 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false }}
-            className="flex flex-col justify-center items-center mx-5 bg-gradient-to-br from-[#134564] xl:via-[#0B2E43] xl:to-[#134564] to-[#0B2E43] rounded-lg p-10 mt-10 xl:bg-none xl:p-0"
+            className="flex flex-col items-center justify-center p-10 mx-5 mt-10 rounded-lg bg-gradient-to-br xl:bg-none xl:p-0"
           >
-            <div className="flex flex-col justify-center items-center xl:hidden">
+            <div className="flex flex-col items-center justify-center xl:hidden">
               <img src={ricadiLogotipo} className="w-[100%] max-w-[300px]" />
               <div>
-                <h3 className="text-xl mt-10 text-center font-bold font-asap text-whiteRICADI">
+                <h3 className="mt-10 text-xl font-bold text-center font-asap text-blueRICADI">
                   Tem alguma cotação em mente?
                 </h3>
-                <p className="text-justify mt-5 text-lg font-maven-pro text-whiteRICADI max-w-[400px]">
+                <p className="text-justify mt-5 text-lg font-maven-pro text-blueRICADI max-w-[400px]">
                   Proteja o que realmente importa! Preencha o formulário e
                   descubra como podemos garantir a sua segurança com as melhores
                   soluções em seguros.
                 </p>
               </div>
             </div>
-            <h3 className="text-xl mt-10 text-center font-bold font-asap text-whiteRICADI max-w-[400px] xl:hidden">
+            <h3 className="text-xl mt-10 text-center font-bold font-asap text-blueRICADI max-w-[400px] xl:hidden">
               Acesse o nosso formulário e solicite sua cotação!
             </h3>
             <div className="mt-10">
-              <img
-                src={ricadiForms}
-                className="rounded-tl-lg rounded-tr-lg m-0 p-0 w-full max-w-[400px] xl:max-w-[1000px]"
-              />
-              <div className="flex flex-col justify-center items-center mt-[-1px] p-5 pt-2 bg-[#0A4C6A] rounded-bl-lg rounded-br-lg xl:pt-5 xl:mt-[-10px]">
-                <div className="hidden justify-between items-center xl:flex xl:gap-32">
+              <div className="flex flex-col justify-center items-center mt-[-1px] p-5 pt-2  xl:bg-transparent xl:rounded-lg rounded-bl-lg rounded-br-lg xl:pt-5 xl:mt-[-10px]">
+                <div className="items-center justify-between hidden xl:flex xl:gap-32">
                   <img
-                    src={ricadiFormsLogotipo}
+                    src={ricadiLogotipo}
                     className="w-[100%] max-w-[350px]"
                   />
-                  <p className="text-justify mt-5 text-lg font-maven-pro text-whiteRICADI max-w-[400px] xl:mt-0">
+                  <p className="text-justify mt-5 text-lg font-maven-pro text-whiteRICADI xl:text-blueRICADI max-w-[400px] xl:mt-0">
                     Proteja o que realmente importa! Preencha o formulário e
                     descubra como podemos garantir a sua segurança com as
                     melhores soluções em seguros.
@@ -222,11 +218,11 @@ export default function HomePage() {
                   onClick={() =>
                     (window.location.href = "https://cotacao.ricadi.com.br")
                   }
-                  className="text-whiteRICADI text-sm font-bold hover:bg-white/10 hover:scale-[1.01] font-asap w-full border-2 border-whiteRICADI rounded-md p-2 max-w-[400px] xl:bg-whiteRICADI xl:text-blueRICADI xl:mt-10 xl:max-w-[880px] xl:p-4 xl:font-extrabold xl:text-xl xl:hover:bg-transparent xl:hover:text-white transition-colors xl:border-[3px]"
+                  className="text-sm font-bold hover:scale-[1.01] font-asap w-full border-2 rounded-md p-2 max-w-[400px] xl:bg-whiteRICADI border-blueRICADI text-blueRICADI xl:mt-10 xl:max-w-[880px] xl:p-4 xl:font-extrabold xl:text-xl hover:bg-blueRICADI hover:text-white transition-colors xl:border-[3px]"
                 >
                   Solicite sua cotação
                 </button>
-                <p className="text-whiteRICADI text-[10px] text-center mt-5 font-maven-pro thin:text-[15px] max-w-[400px] xl:hidden">
+                <p className="text-blueRICADI text-[10px] text-center mt-5 font-maven-pro thin:text-[15px] max-w-[400px] xl:hidden">
                   Responderemos assim que possível
                 </p>
               </div>
@@ -243,7 +239,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: false }}
-            className="text-blueRICADI text-2xl font-bold font-asap hidden big:block big:mt-32"
+            className="hidden text-2xl font-bold text-blueRICADI font-asap big:block big:mt-32"
           >
             Quer ajuda para formular uma{" "}
             <span className="text-textBlue">ideia</span>?

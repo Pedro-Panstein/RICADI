@@ -1,0 +1,18 @@
+Abrir botão em nova página 👍
+
+deixar os seguros na mesma página 👍
+
+
+ordenação: 👍
+1 - automovel
+2 - frota
+
+3 - residencial
+4 - empresarial
+
+5 - viagem
+6 - consorcio
+
+7 - outros
+
+Trocar a seção de formulário 
