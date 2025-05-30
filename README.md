@@ -38,7 +38,7 @@ Certifique-se de ter instalado:
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/ricadi-site.git
+   git clone https://github.com/Pedro-Panstein/RICADI.git
    ```
 
 2. Acesse a pasta do projeto:
